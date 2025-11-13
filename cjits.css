@@ -1,0 +1,151 @@
+/* ===== CJITS Page — Suited CSS (drop into <style> or a .css file) ===== */
+
+/* Reset / base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: "Verdana", Geneva, Tahoma, sans-serif; color: #222; background: #f7f8fb; }
+
+/* Page container & header */
+table { width: 100%; border-collapse: collapse; }
+header, .page-header { display: block; }
+h1 { font-size: 1.6rem; color: #0b3d91; margin-bottom: 4px; }
+small { color: #555; font-size: 0.9rem; }
+
+/* Top links */
+td a { color: #0b3d91; text-decoration: none; margin-left: 8px; }
+td a:hover { text-decoration: underline; }
+
+/* Horizontal rule */
+hr { border: 0; height: 1px; background: linear-gradient(90deg, rgba(11,61,145,0.12), rgba(11,61,145,0.06)); margin: 12px 0; }
+
+/* Table cells: layout columns */
+td { vertical-align: top; padding: 12px; }
+
+/* Left menu and right column */
+#menu fieldset,
+td > fieldset { background: #fff; border: 1px solid #e1e6f0; border-radius: 6px; padding: 12px; box-shadow: 0 1px 3px rgba(22,35,80,0.03); }
+#menu legend,
+td > fieldset legend { font-weight: 700; color: #0b3d91; padding: 0 6px; }
+
+/* Menu list */
+#menu ul { list-style: none; margin-top: 8px; }
+#menu li { margin: 6px 0; }
+#menu a { color: #0b3d91; text-decoration: none; font-size: 0.95rem; }
+#menu a:hover { text-decoration: underline; }
+
+/* Right column (Other Options) */
+td[width="20%"] fieldset { min-height: 240px; }
+td[width="20%"] ul { list-style: disc; margin-left: 18px; margin-top: 6px; color: #333; }
+address { font-style: normal; color: #444; margin-top: 8px; }
+
+/* About section */
+#about { background: #fff; margin: 8px 12px; padding: 14px; border-radius: 6px; border: 1px solid #e6ebf5; }
+#about h3 { color: #0b3d91; margin-bottom: 8px; }
+
+/* Fieldset inner text */
+fieldset p, fieldset ul, fieldset address { color: #333; line-height: 1.45; font-size: 0.95rem; }
+
+/* ===== Slideshow CSS ===== */
+.slideshow-container {
+  max-width: 720px;         /* change to desired width */
+  width: 100%;
+  position: relative;
+  margin: 8px auto;
+  background: #000;         /* background behind images while loading */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(11,61,145,0.08);
+}
+
+/* Individual slides */
+.mySlides { display: none; position: relative; }
+.mySlides img { display: block; width: 100%; height: auto; }
+
+/* Number text */
+.numbertext {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 4px 8px;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  font-size: 0.85rem;
+  border-radius: 3px;
+}
+
+/* Caption text area */
+.text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 14px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+  color: #fff;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Prev / Next buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 12px 14px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0,0,0,0.35);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 180ms ease, transform 120ms ease;
+  line-height: 1;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+.prev:hover, .next:hover { background: rgba(0,0,0,0.65); transform: translateY(-50%) scale(1.02); }
+
+/* Dots (indicators) */
+.dots-row { text-align: center; padding: 8px 0 16px 0; }
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+.dot:hover { transform: scale(1.12); }
+.active { background-color: #0b3d91 !important; }
+
+/* Fade animation */
+.fade { animation: fadein 850ms ease-in-out; }
+@keyframes fadein { from { opacity: 0.3 } to { opacity: 1 } }
+
+/* Make sure the prev/next appear above captions */
+.prev, .next, .numbertext { z-index: 4; }
+.text { z-index: 3; }
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .slideshow-container { max-width: 88%; }
+  h1 { font-size: 1.2rem; }
+  td[width="20%"] { display: none; } /* hide right column on small screens */
+}
+
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .prev, .next { padding: 8px 10px; font-size: 18px; }
+  .numbertext { font-size: 0.75rem; }
+  .dot { height: 10px; width: 10px; margin: 0 4px; }
+  table, td { display: block; width: 100%; }
+  td { padding: 8px; }
+  #menu { order: 1; }
+  #gallery { order: 2; }
+}
+
+/* Utility helpers */
+.center { text-align: center; }
+small.note { color: #666; display: block; margin-top: 8px; font-size: 0.85rem; }
